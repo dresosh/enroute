@@ -1,0 +1,12 @@
+section.team-container {
+  background: red;
+  // min-height: 500px;
+  .slideshow {
+    .item {
+      max-height: 720px;
+    }
+    .slideBtn {
+      margin: 0 5px;
+    }
+  }
+}

@@ -18,6 +18,12 @@
     // All pages
     'common': {
       init: function() {
+        // Testing
+        if (screen.width < 420){
+          $( 'nav' ).addClass( 'navbar-fixed-top' )
+          $('section.container').css( 'margin-top', '5px' )
+        }
+
         // JavaScript to be fired on all pages
         if ( $('nav').hasClass('navbar-fixed-top') ) {
           $('body').css( 'padding-top', '50px');
@@ -66,7 +72,18 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
+        // Adds active class to first img in the list
         $('.item:first-child').addClass('active');
+
+
+        var slide = $('.item');
+        var list = '.carousel-indicators';
+        for (var i = 0; i < slide.length; i++) {
+          $( list ).append('<li class="slideBtn" data-target="#carousel-example-generic" data-slide-to="' + i + '" ></li>')
+          $( '.slideBtn:first-child' ).addClass('active');
+        }
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

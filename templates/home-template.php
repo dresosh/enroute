@@ -5,23 +5,21 @@
 ?>
 <section class="home-container container animated fadeInUp">
   <div class="row">
-    <div class="col-md-12 no-padding">
+    <div class="heading col-md-12 animated fadeInRight">
+      <?php if( get_field('heading') ): ?>
+        <h1><?php echo get_field( 'heading' ); ?></h1>
+      <?php endif; ?>
+    </div>
+    <div class="slideshow col-md-12 no-padding">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <!-- Slide Buttons go here -->
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-          <!-- <div class="item active">
-            <img src="..." alt="...">
-            <div class="carousel-caption">
-              ...
-            </div>
-          </div> -->
+
           <?php
 
           $images = get_field('slideshow');
@@ -31,7 +29,7 @@
           <?php foreach( $images as $image ): ?>
             <div class="item">
               <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-              <p><?php echo $image['caption']; ?></p>
+              <!-- <p><?php echo $image['caption']; ?></p> -->
             </div>
           <?php endforeach; ?>
 
