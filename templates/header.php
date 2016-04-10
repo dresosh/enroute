@@ -1,7 +1,7 @@
 <header>
   <div class="container no-padding">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+      <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-nav" aria-expanded="false">
@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/enroute">Brand</a>
+          <a class="navbar-brand" href="/enroute">Enroute</a>
         </div>
       <?php
       if (has_nav_menu('primary_navigation')) :

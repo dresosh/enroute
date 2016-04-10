@@ -1,0 +1,15 @@
+nav.navbar.navbar-inverse {
+  border-radius: 0;
+  border: none;
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 200;
+  li {
+    a {
+       &:hover {
+         color: green;
+       }
+    }
+  }
+
+}

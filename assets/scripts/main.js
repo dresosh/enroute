@@ -23,11 +23,11 @@
           $('body').css( 'padding-top', '50px');
         }
 
-        if ( $( 'section' ).hasClass( 'bounceInLeft') ) {
+        if ( $( 'section' ).hasClass( 'fadeInLeft') ) {
           $('nav a').on( 'click', function(){
-            $('section').addClass('slideOutRight');
+            $('section').addClass('fadeOutRight');
           });
-        } else if ( $( 'section' ).hasClass( 'bounceInRight') ) {
+        } else if ( $( 'section' ).hasClass( 'fadeInRight') ) {
           $('nav a').on( 'click', function(){
             $('section').addClass('slideOutLeft');
           });
@@ -41,7 +41,7 @@
           });
         } else if ( $( 'section' ).hasClass( 'flipInY') ) {
           $('nav a').on( 'click', function(){
-            $('section').addClass('flipOutY');
+            $('section').addClass('zoomOut');
           });
         } else if ( $( 'section' ).hasClass( 'zoomIn') ) {
           $('nav a').on( 'click', function(){
@@ -66,6 +66,7 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+        $('.item:first-child').addClass('active');
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
