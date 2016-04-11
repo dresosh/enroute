@@ -3,16 +3,57 @@
  * Template Name: Team
  */
 ?>
+
+<?php $skaters = array( 'post_type' => 'skater', 'posts_per_page' => -1 ); ?>
+<?php $loop = new WP_Query( $skaters ); ?>
+
+<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+<div class="modal fade" id="<?php global $post; echo $post->post_name; ?>-modal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+				<div class="row">
+					<div class=" col-md-4 animated fadeInRight">
+						<div class="modal-img-container">
+							<img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>" alt="">
+						</div>
+
+					</div>
+					<div class="bio-container col-md-8 animated zoomIn">
+            <h1><?php echo the_title(); ?></h1>
+						<p>Nickname:  <?php echo get_field( 'nickname' ); ?></p>
+						<p>Born: <?php echo get_field( 'age' ) ?></p>
+						<p>Birthplace:  <?php echo get_field( 'birthplace' ); ?></p>
+						<p>Residence:  <?php echo get_field( 'residence' ); ?></p>
+						<p>Sponsors:  <?php echo get_field( 'sponsors' ); ?></p>
+						<p>Stance:  <?php echo get_field( 'stance' ); ?></p>
+						<p>Contact:  <?php echo get_field( 'contact' ); ?></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php endwhile;  wp_reset_query();?>
+
+
+
 <section class="team-container container animated fadeInLeft">
   <div class="row">
-    <?php $args = array( 'post_type' => 'skater', 'posts_per_page' => -1 ); ?>
-    <?php $loop = new WP_Query( $args ); ?>
-
+    <?php $skater = array( 'post_type' => 'skater', 'posts_per_page' => -1 ); ?>
+    <?php $loop = new WP_Query( $skater ); ?>
 
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-      <div class="col-md-3 animated zoomInDown">
-        <img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>" alt="" />
-      </div>
+      <a href="<?php global $post; echo $post->post_name; ?>-modal" data-toggle="modal" data-target="#<?php global $post; echo $post->post_name; ?>-modal">
+        <div class="img-container col-md-3 col-sm-4 col-xs-6 animated zoomInLeft">
+          <div class="img-border">
+            <img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>" alt="" />
+          </div>
+        </div>
+      </a>
     <?php endwhile; ?>
 
     </div>

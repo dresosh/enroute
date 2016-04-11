@@ -4,4 +4,27 @@
 
 section.container {
   margin-top: 55px;
+  .row {
+    margin: 0 -30px;
+    @include iphone {
+      margin: 0 -15px;
+    };
+    .img-container {
+      margin-bottom: 30px;
+      @include iphone {
+        margin: 0;
+        padding: 5px 5px;
+      };
+    }
+  }
+}
+
+body {
+@media ( min-width: 768px ) {
+  overflow-y: hidden;
+
+}
+  @include iphone {
+    overflow-x: hidden;
+  };
 }

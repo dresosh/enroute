@@ -10,7 +10,7 @@
         <h1><?php echo get_field( 'heading' ); ?></h1>
       <?php endif; ?>
     </div>
-    <div class="slideshow col-md-12 no-padding">
+    <div class="slideshow col-md-12">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
