@@ -24,13 +24,33 @@
 					</div>
 					<div class="bio-container col-md-8 animated zoomIn">
             <h1><?php echo the_title(); ?></h1>
-						<p>Nickname:  <?php echo get_field( 'nickname' ); ?></p>
-						<p>Born: <?php echo get_field( 'age' ) ?></p>
-						<p>Birthplace:  <?php echo get_field( 'birthplace' ); ?></p>
-						<p>Residence:  <?php echo get_field( 'residence' ); ?></p>
-						<p>Sponsors:  <?php echo get_field( 'sponsors' ); ?></p>
-						<p>Stance:  <?php echo get_field( 'stance' ); ?></p>
-						<p>Contact:  <?php echo get_field( 'contact' ); ?></p>
+            <?php if ( get_field( 'nickname' ) ): ?>
+              <p>Nickname:  <?php echo get_field( 'nickname' ); ?></p>
+            <?php endif ?>
+            <?php if ( get_field( 'born' ) ): ?>
+              <p>Born: <?php echo get_field( 'born' ) ?></p>
+            <?php endif ?>
+            <?php if ( get_field( 'birthplace' ) ): ?>
+              <p>Birthplace:  <?php echo get_field( 'birthplace' ); ?></p>
+            <?php endif ?>
+            <?php if ( get_field( 'residence' ) ): ?>
+              <p>Residence:  <?php echo get_field( 'residence' ); ?></p>
+            <?php endif ?>
+            <?php if ( get_field( 'sponsors' ) ): ?>
+              <p>Sponsors:  <?php echo get_field( 'sponsors' ); ?></p>
+            <?php endif ?>
+            <?php if ( get_field( 'profession' ) ): ?>
+              <p>Profession:  <?php echo get_field( 'profession' ); ?></p>
+            <?php endif ?>
+            <?php if ( get_field( 'skate' ) ): ?>
+              <p>Skate?:  <?php echo get_field( 'skate' ); ?></p>
+            <?php endif ?>
+            <?php if ( get_field( 'stance' ) ): ?>
+              <p>Stance:  <?php echo get_field( 'stance' ); ?></p>
+            <?php endif ?>
+            <?php if ( get_field( 'contact' ) ): ?>
+              <p>Contact:  <?php echo get_field( 'contact' ); ?></p>
+            <?php endif ?>
 					</div>
 				</div>
 			</div>
@@ -43,7 +63,7 @@
 
 <section class="team-container container animated fadeInLeft">
   <div class="row">
-    <?php $skater = array( 'post_type' => 'skater', 'posts_per_page' => -1 ); ?>
+    <?php $skater = array( 'post_type' => 'skater', 'posts_per_page' => -1, 'order' => 'ASC' ); ?>
     <?php $loop = new WP_Query( $skater ); ?>
 
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
