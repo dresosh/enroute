@@ -72,6 +72,9 @@
           <div class="img-border">
             <img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>" alt="" />
           </div>
+					<p>
+						<?php echo the_title(); ?>
+					</p>
         </div>
       </a>
     <?php endwhile; ?>

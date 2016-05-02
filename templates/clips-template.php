@@ -17,7 +17,7 @@
 
 				<div class="row">
             <div class="col-md-12">
-              <iframe class="img-responsive" width="1280" height="720" src="<?php echo get_field('clip'); ?>" frameborder="0" allowfullscreen></iframe>
+              <iframe class="vid-responsive" width="1280" height="720" src="<?php echo get_field('clip'); ?>" frameborder="0" allowfullscreen></iframe>
             </div>
 				</div>
 			</div>
@@ -37,6 +37,7 @@
       <!-- <p>
         <?php echo get_field('clip'); ?>
       </p> -->
+
       <a href="<?php global $post; echo $post->post_name; ?>-modal" data-toggle="modal" data-target="#<?php global $post; echo $post->post_name; ?>-modal">
         <div class="col-md-4">
           <img class="img-responsive" src="<?php echo the_post_thumbnail_url(); ?>" alt="" />
