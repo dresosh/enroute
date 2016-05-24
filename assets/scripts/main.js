@@ -18,6 +18,17 @@
     // All pages
     'common': {
       init: function() {
+        // Nav active state
+        if ( $('body').hasClass('team') ) {
+          $('.menu-item-10').addClass('active')
+        } else if ( $('body').hasClass('clips') ) {
+          $('.menu-item-13').addClass('active')
+        } else if ( $('body').hasClass('pics') ) {
+          $('.menu-item-16').addClass('active')
+        } else if ( $('body').hasClass('blog') ) {
+          $('.menu-item-19').addClass('active')
+        }
+
         // Testing
         if (screen.width < 420){
           $( 'nav' ).addClass( 'navbar-fixed-top' )
@@ -45,7 +56,7 @@
           $('nav a').on( 'click', function(){
             $('section').addClass('fadeOutDownBig');
           });
-        } else if ( $( 'section' ).hasClass( 'flipInY') ) {
+        } else if ( $( 'section' ).hasClass( 'zoomInLeft') ) {
           $('nav a').on( 'click', function(){
             $('section').addClass('zoomOut');
           });
@@ -84,6 +95,15 @@
           $( '.slideBtn:first-child' ).addClass('active');
         }
 
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+      }
+    },
+    // Home page
+    'clips': {
+      init: function() {
+        // JavaScript to be fired on the home page
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

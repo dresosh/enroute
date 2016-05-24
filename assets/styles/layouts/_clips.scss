@@ -1,0 +1,23 @@
+
+.vid-responsive {
+  width: 100%;
+  @include iphone {
+    height: 420px;
+  };
+}
+
+section.clip-container {
+  .row {
+    .vid-margin {
+      margin-bottom: 10px;
+      &:hover {
+        .title-cover {
+          opacity: 1;
+        }
+      }
+      @include iphone {
+        margin-bottom: 10px;
+      };
+    }
+  }
+}

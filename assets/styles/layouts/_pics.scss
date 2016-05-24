@@ -1,0 +1,40 @@
+// margin-bottom
+$mr-btm: 10px;
+//
+$img-height: 60vh;
+$main-pic-h: calc(#{$img-height} - #{$mr-btm});
+$pic-h: calc(#{$img-height} / 3 );
+
+
+section.pics-container {
+  .main-pics {
+    height: $main-pic-h;
+    background-size: cover;
+    @include iphone {
+      height: calc(#{$pic-h} - #{$mr-btm});
+      margin-bottom: 10px;
+    };
+  }
+  .pics {
+    height: calc(#{$pic-h} - #{$mr-btm});
+    margin-bottom: $mr-btm;
+    .title-cover {
+      padding-top: 25%;
+      @include mobile {
+        padding-top: 30%;
+      };
+    }
+    &:hover {
+      .title-cover {
+        opacity: 1;
+      }
+    }
+    .img-pic {
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      // height: calc(#{$pic-h} - #{$mr-btm});
+      background: #000;
+    }
+  }
+}

@@ -2,12 +2,23 @@
   padding: 0;
 }
 
+// .margin {
+//   margin: 0 -20px !important;
+// }
+//
+.padding {
+  padding: 0 5px;
+  @include iphone {
+    padding: 0 5px;
+  };
+}
+
 section.container {
   margin-top: 55px;
   .row {
-    margin: 0 -30px;
+    margin: 0 -20px;
     @include iphone {
-      margin: 0 -15px;
+      margin: 0 -10px;
     };
     .img-container {
       // margin-bottom: 30px;
@@ -19,12 +30,33 @@ section.container {
   }
 }
 
-body {
-@media ( min-width: 768px ) {
-  overflow-y: hidden;
+  h1 {
+    @include font1;
+    font-size: 28px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
 
-}
+// green title cover
+.title-cover {
+  @include font2;
+  position: absolute;
+  width: calc(100% - 10px);
+  height: 100%;
+  background: $green_t;
+  color: #fff;
+  text-align: center;
+  padding: 30% 10px;
+  transition: opacity .8s;
+  opacity: 0;
+  text-transform: uppercase;
   @include iphone {
-    overflow-x: hidden;
+    padding: 15% 10px;
   };
+  h2 {
+    font-size: 18px;
+    @include iphone {
+      font-size: 16px;
+    };
+  }
 }

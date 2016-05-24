@@ -30,6 +30,15 @@ $ipad-landscape: 1024px;
 $desktop-1600px: 1600px;
 $desktop-1920px: 1920px;
 
+@mixin font1 {
+  font-family: 'Rock Salt', cursive;
+}
+
+@mixin font2 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+
 @mixin non-mobile {
   @media (min-width: 768px) {
     @content;

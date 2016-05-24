@@ -5,6 +5,9 @@
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+// Webfonts
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt|Permanent+Marker);
+
 @import "common/mixins";
 @import "common/global";
 @import "common/nav";
@@ -22,3 +25,5 @@
 @import "layouts/tinymce";
 @import "layouts/home";
 @import "layouts/team";
+@import "layouts/clips";
+@import "layouts/pics";

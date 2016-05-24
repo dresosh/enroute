@@ -1,4 +1,6 @@
 nav.navbar.navbar-inverse {
+  @include font2;
+  font-size: 20px;
   border-radius: 0;
   border: none;
   text-transform: uppercase;
@@ -6,6 +8,7 @@ nav.navbar.navbar-inverse {
   z-index: 200;
   li {
     a {
+      text-align: center;
        &:hover {
          color: green;
        }

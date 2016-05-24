@@ -1,26 +1,32 @@
 section.home-container {
   // background: red;
   // min-height: 500px;
-  .heading {
-    text-align: center;
-    // background: #2da656;
-    // height: 80px;
-    // margin-bottom: 5px;
-    h1 {
-      margin: 20px 0;
-    }
+  .row {
+    margin: 0 -30px;
     @include iphone {
-      h1 {
-        font-size: 22px
-      }
+      margin: 0 -20px;
     };
-  }
-  .slideshow {
-    .item {
-      max-height: 720px;
+    .heading {
+      text-align: center;
+      // background: #2da656;
+      // height: 80px;
+      // margin-bottom: 5px;
+      h1 {
+        margin: 20px 0;
+      }
+      @include iphone {
+        h1 {
+          font-size: 22px
+        }
+      };
     }
-    .slideBtn {
-      margin: 0 5px;
+    .slideshow {
+      .item {
+        max-height: 720px;
+      }
+      .slideBtn {
+        margin: 0 5px;
+      }
     }
   }
 }

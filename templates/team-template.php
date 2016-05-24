@@ -4,6 +4,7 @@
  */
 ?>
 
+<!-- Team Modal -->
 <?php $skaters = array( 'post_type' => 'skater', 'posts_per_page' => -1 ); ?>
 <?php $loop = new WP_Query( $skaters ); ?>
 
@@ -61,21 +62,26 @@
 
 
 
-<section class="team-container container animated fadeInLeft">
+<section class="team-container container animated ">
+	<div class="row">
+	  <div class="col-md-12 padding">
+	    <h1>Enroute Team</h1>
+	  </div>
+	</div>
   <div class="row">
     <?php $skater = array( 'post_type' => 'skater', 'posts_per_page' => -1, 'order' => 'ASC' ); ?>
     <?php $loop = new WP_Query( $skater ); ?>
 
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
       <a href="<?php global $post; echo $post->post_name; ?>-modal" data-toggle="modal" data-target="#<?php global $post; echo $post->post_name; ?>-modal">
-        <div class="img-container col-md-3 col-sm-4 col-xs-6 animated zoomInLeft">
+        <section class="img-container col-md-3 padding col-sm-4 col-xs-6 animated zoomIn">
           <div class="img-border">
             <img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>" alt="" />
           </div>
 					<p>
 						<?php echo the_title(); ?>
 					</p>
-        </div>
+        </section>
       </a>
     <?php endwhile; ?>
 
