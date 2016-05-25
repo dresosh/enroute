@@ -10,6 +10,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-icon-color="transparent">
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_email"></a>
+            <a class="a2a_button_sms"></a>
+            <a class="a2a_button_whatsapp"></a>
+          </div>
           <a class="navbar-brand" href="/enroute">Enroute</a>
         </div>
       <?php
