@@ -4,5 +4,10 @@
  */
 ?>
 <section class="home-container container animated fadeInUp">
-  <h1>This is the Blog template</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Welcome to the Enroute Blog</h1>
+
+      </div>
+    </div>
 </section>

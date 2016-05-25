@@ -1,6 +1,4 @@
 nav.navbar.navbar-inverse {
-  @include font2;
-  font-size: 20px;
   border-radius: 0;
   border: none;
   text-transform: uppercase;
@@ -8,11 +6,21 @@ nav.navbar.navbar-inverse {
   z-index: 200;
   li {
     a {
+      transition: color .5s;
       text-align: center;
-       &:hover {
+       &:hover, &:focus, &:active {
          color: green;
        }
     }
   }
 
+}
+
+
+// Active State
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: green;
+    background-color: transparent;
 }
