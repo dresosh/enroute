@@ -20,19 +20,19 @@
       init: function() {
         // Nav active state
         if ( $('body').hasClass('team') ) {
-          $('.menu-item-10').addClass('active')
+          $('.menu-item-10').addClass('active');
         } else if ( $('body').hasClass('clips') ) {
-          $('.menu-item-13').addClass('active')
+          $('.menu-item-13').addClass('active');
         } else if ( $('body').hasClass('pics') ) {
-          $('.menu-item-16').addClass('active')
+          $('.menu-item-16').addClass('active');
         } else if ( $('body').hasClass('blog') ) {
-          $('.menu-item-19').addClass('active')
+          $('.menu-item-19').addClass('active');
         }
 
         // Testing
         if (screen.width < 420){
-          $( 'nav' ).addClass( 'navbar-fixed-top' )
-          $('section.container').css( 'margin-top', '5px' )
+          $( 'nav' ).addClass( 'navbar-fixed-top' );
+          $('section.container').css( 'margin-top', '5px' );
         }
 
         // JavaScript to be fired on all pages
@@ -40,39 +40,19 @@
           $('body').css( 'padding-top', '50px');
         }
 
-        if ( $( 'section' ).hasClass( 'fadeInLeft') ) {
-          $('nav a').on( 'click', function(){
-            $('section').addClass('fadeOutRight');
+        // Navbar animation
+        if ( $( 'section' ).hasClass( 'zoomIn') ) {
+          $('nav a').on( 'click', function() {
+            $('section').addClass('zoomOut');
+            $('h1.animated').addClass('zoomOut');
           });
-        } else if ( $( 'section' ).hasClass( 'fadeInRight') ) {
-          $('nav a').on( 'click', function(){
-            $('section').addClass('slideOutLeft');
-          });
-        } else if ( $( 'section' ).hasClass( 'fadeInUp') ) {
-          $('nav a').on( 'click', function(){
+        } else if ( $( 'section' ).hasClass( 'fadeInUp' ) ) {
+          $('nav a').on('click', function() {
             $('section').addClass('fadeOutDown');
-          });
-        } else if ( $( 'section' ).hasClass( 'bounceInUp') ) {
-          $('nav a').on( 'click', function(){
-            $('section').addClass('fadeOutDownBig');
-          });
-        } else if ( $( 'section' ).hasClass( 'zoomInLeft') ) {
-          $('nav a').on( 'click', function(){
-            $('section').addClass('zoomOut');
-          });
-        } else if ( $( 'section' ).hasClass( 'zoomIn') ) {
-          $('nav a').on( 'click', function(){
-            $('section').addClass('zoomOut');
-          });
-        } else if ( $( 'section' ).hasClass( 'rollIn') ) {
-          $('nav a').on( 'click', function(){
-            $('section').addClass('rollOut');
-          });
-        } else if ( $( 'section' ).hasClass( 'bounceIn') ) {
-          $('nav a').on( 'click', function(){
-            $('section').addClass('bounceOut');
+            $('.heading').addClass('fadeOutRight');
           });
         }
+
 
       },
       finalize: function() {
@@ -91,7 +71,7 @@
         var slide = $('.item');
         var list = '.carousel-indicators';
         for (var i = 0; i < slide.length; i++) {
-          $( list ).append('<li class="slideBtn" data-target="#carousel-example-generic" data-slide-to="' + i + '" ></li>')
+          $( list ).append('<li class="slideBtn" data-target="#carousel-example-generic" data-slide-to="' + i + '" ></li>');
           $( '.slideBtn:first-child' ).addClass('active');
         }
 

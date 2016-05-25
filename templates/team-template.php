@@ -62,10 +62,10 @@
 
 
 
-<section class="team-container container animated ">
+<section class="team-container container">
 	<div class="row">
 	  <div class="col-md-12 padding">
-	    <h1>Enroute Team</h1>
+	    <h1 class="animated bounceInRight">Enroute Team</h1>
 	  </div>
 	</div>
   <div class="row">

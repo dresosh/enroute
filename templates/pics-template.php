@@ -6,7 +6,7 @@
 <section class="pics-container container">
   <div class="row">
     <div class="col-md-12">
-      <h1>Enroute Pics</h1>
+      <h1 class="animated bounceInRight">Enroute Pics</h1>
     </div>
   </div>
   <div class="row">

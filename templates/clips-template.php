@@ -32,7 +32,7 @@
 <section class="clip-container container">
   <div class="row">
     <div class="col-md-12 padding">
-      <h1>Enroute Clips</h1>
+      <h1 class="animated bounceInRight">Enroute Clips</h1>
     </div>
   </div>
   <div class="row">
