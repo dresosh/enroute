@@ -19,7 +19,7 @@ if( !empty($image) ): ?>
 
 				<div class="row">
             <div class="col-md-12">
-              <h1 class="img-caption"><?php echo get_field('main_caption'); ?></h1>
+              <h1 class="img-caption"><?php echo $image['caption'] ?></h1>
               <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="" />
             </div>
 				</div>
