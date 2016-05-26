@@ -28,7 +28,8 @@
 
           <?php foreach( $images as $image ): ?>
             <div class="item">
-              <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+              <div class="img" style="background-image: url(<?php echo $image['url']; ?>);"></div>
+              <!-- <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> -->
               <!-- <p><?php echo $image['caption']; ?></p> -->
             </div>
           <?php endforeach; ?>
