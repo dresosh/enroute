@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-icon-color="transparent">
+          <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-icon-color="transparent"  data-a2a-url="http://www.enroutefilms.com/" data-a2a-title="Check out Enroute Films">
             <a class="a2a_button_facebook"></a>
             <a class="a2a_button_twitter"></a>
             <a class="a2a_button_email"></a>
