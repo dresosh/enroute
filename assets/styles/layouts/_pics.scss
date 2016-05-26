@@ -6,6 +6,17 @@ $main-pic-h: calc(#{$img-height} - #{$mr-btm});
 $pic-h: calc(#{$img-height} / 3 );
 
 
+.img-caption {
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  padding: 20px;
+  color: #fff;
+  background: rgba(15, 15, 15, .5);
+}
+
+
 section.pics-container {
   .main-pics {
     height: $main-pic-h;
