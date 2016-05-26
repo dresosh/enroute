@@ -11,7 +11,7 @@ $image = get_field('main_pic');
 
 if( !empty($image) ): ?>
 
-<div class="modal fade" id="<?php echo $image['caption']; ?>-modal">
+<div class="modal fade" id="<?php echo $image['ID']; ?>-modal">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -41,7 +41,7 @@ if( $images ): ?>
     <div>
         <?php foreach( $images as $image ): ?>
 
-<div class="modal fade" id="<?php echo $image['title']; ?>-modal">
+<div class="modal fade" id="<?php echo $image['ID']; ?>-modal">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -79,7 +79,7 @@ if( $images ): ?>
       $image = get_field('main_pic');
 
       if( !empty($image) ): ?>
-        <a href="<?php echo $image['caption']; ?>-modal" data-toggle="modal" data-target="#<?php echo $image['caption']; ?>-modal">
+        <a href="<?php echo $image['ID']; ?>-modal" data-toggle="modal" data-target="#<?php echo $image['ID']; ?>-modal">
           <div class="main-pics" style="background-position: <?php echo get_field('pic_pos'); ?>; background-image: url(<?php echo $image['url']; ?>);"></div>
         </a>
 
@@ -93,7 +93,7 @@ if( $images ): ?>
         <div>
             <?php foreach( $images as $image ): ?>
                 <section class="col-md-3 col-sm-4 col-xs-6 padding pics animated zoomIn">
-                  <a href="<?php echo $image['title']; ?>-modal" data-toggle="modal" data-target="#<?php echo $image['title']; ?>-modal">
+                  <a href="<?php echo $image['ID']; ?>-modal" data-toggle="modal" data-target="#<?php echo $image['ID']; ?>-modal">
                     <div class="title-cover">
                       <h2><?php echo $image['caption']; ?></h2>
                     </div>
