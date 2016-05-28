@@ -15,15 +15,15 @@ nav.navbar.navbar-inverse {
     }
   }
   .a2a_kit {
-    a:first-child {
-      top: -10px !important;
-    }
-    position: absolute;
+    position: relative;
     top: 15px;
     right: 0;
     width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
     @include iphone {
-      display: none;
+      // display: block;
+      // top: 300px;
     };
   }
   .navbar-brand {
@@ -47,7 +47,7 @@ nav.navbar.navbar-inverse {
     ul {
       background: $nav-ul;
       @include iphone {
-        height: calc(100vh - #{$nav-height}) !important;
+        // height: calc(100vh - #{$nav-height}) !important;
 
       };
       li {
@@ -57,7 +57,7 @@ nav.navbar.navbar-inverse {
           transition: color .5s;
           text-align: center;
           @include iphone {
-            padding: 30px 0;
+            // padding: 30px 0;
           };
           &:hover, &:focus, &:active {
             color: green;
@@ -65,8 +65,17 @@ nav.navbar.navbar-inverse {
         }
       }
     }
+    ul.navbar-right {
+      @include iphone {
+        padding-bottom: calc(100vh - 290px);
+      };
+    }
   }
 
+}
+
+.navbar-nav {
+    margin: 0px -15px;
 }
 
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {

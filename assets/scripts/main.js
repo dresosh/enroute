@@ -20,13 +20,13 @@
       init: function() {
         // Nav active state
         if ( $('body').hasClass('team') ) {
-          $('.menu-item-10').addClass('active');
+          $('.team_btn').addClass('active');
         } else if ( $('body').hasClass('clips') ) {
-          $('.menu-item-13').addClass('active');
+          $('.clips_btn').addClass('active');
         } else if ( $('body').hasClass('pics') ) {
-          $('.menu-item-16').addClass('active');
+          $('.pics_btn').addClass('active');
         } else if ( $('body').hasClass('blog') ) {
-          $('.menu-item-19').addClass('active');
+          $('.blog_btn').addClass('active');
         }
 
         // Testing
@@ -40,7 +40,7 @@
           $('body').css( 'padding-top', '50px');
         }
 
-        // Navbar animation
+        // Site transitions
         if ( $( 'section' ).hasClass( 'zoomIn') ) {
           $('nav a').on( 'click', function() {
             $('section').addClass('zoomOut');
@@ -52,6 +52,9 @@
             $('.heading').addClass('fadeOutRight');
           });
         }
+
+
+
 
 
       },
