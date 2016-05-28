@@ -4,7 +4,8 @@ section.blog-container {
       .post-container {
         border-left: 1px solid $green;
         .single-post {
-          padding-top: 20px;
+
+          padding: 20px 0 60px 0;
           h2, h3 {
             margin: 0;
           }
@@ -19,7 +20,7 @@ section.blog-container {
           }
         }
         @include mobile {
-          margin-left: 20px;          
+          margin-left: 20px;
         };
       }
     }

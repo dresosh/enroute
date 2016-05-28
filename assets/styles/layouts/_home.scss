@@ -41,3 +41,36 @@ section.home-container {
     }
   }
 }
+
+.fa-chevron-circle-left {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  font-size: 40px;
+}
+
+.fa-chevron-circle-right {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  font-size: 40px;
+}
+
+a.carousel-control.right, .left {
+  background-image: none;
+  &:hover {
+    background-image: none;
+  }
+}
+
+ol.carousel-indicators {
+  li {
+    border: 1px solid #615b5b;
+  }
+  li.active {
+      // background-color: $green;
+     background: linear-gradient(to bottom, #d7d7d7, #575757);
+  }
+}

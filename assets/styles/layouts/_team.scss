@@ -16,6 +16,10 @@ div.modal.fade {
           font-weight: 300;
           margin-right: 5px;
         }
+
+      .bio-container {
+        @include font2;
+      }
       }
     }
   }

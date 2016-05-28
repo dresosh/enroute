@@ -15,6 +15,7 @@ nav.navbar.navbar-inverse {
   }
   li {
     a {
+      @include font2;
       transition: color .5s;
       text-align: center;
        &:hover, &:focus, &:active {
