@@ -32,12 +32,12 @@ nav.navbar.navbar-inverse {
       top: -10px;
       height: 50px;
       width: 98px;
-      // @include iphone {
-      //   position: absolute;
-      //   top: 5px;
-      //   left: 50%;
-      //   transform: translateX(-50%);
-      // };
+      @include iphone {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+      };
     }
   }
   .navbar-collapse {
