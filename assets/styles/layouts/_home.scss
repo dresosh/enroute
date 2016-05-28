@@ -17,10 +17,23 @@ section.home-container {
       };
     }
     .slideshow {
+      .carousel-indicators {
+        @include mobile {
+          display: none;
+        };
+      }
       .item {
         width: 1280px;
         height: 720px;
-        @include mobile {
+        @include ipad-portrait {
+          width: 100%;
+          height: 550px;
+        };
+        @include iphone6-portrait {
+          width: 100%;
+          height: 250px;
+        };
+        @include iphone5-portrait {
           width: 100%;
           height: 200px;
         };
@@ -50,9 +63,14 @@ section.home-container {
         background-size: contain;
         width: 200px;
         height: 115px;
-        @include iphone {
+        @include iphone6-portrait {
           width: 90px;
-          top: 130px;
+          top: 180px;
+          right: 60px;
+        };
+        @include iphone5-portrait {
+          width: 90px;
+          top: 140px;
           right: 40px;
         };
       }

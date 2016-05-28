@@ -33,6 +33,7 @@ section.team-container {
   .row {
     a {
       .img-container {
+
         p {
           @include font1;
           text-align: center;
@@ -49,11 +50,13 @@ section.team-container {
           @include iphone {
             height: 185px;
           };
+          @include iphone5-portrait {
+            height: 160px;
+          };
           border: 2px solid #000;
         }
         img {
           box-sizing: border-box;
-          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeeeee+0,cccccc+100;Gren+3D */
           background: rgb(238,238,238); /* Old browsers */
           background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6-15 */
           background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
