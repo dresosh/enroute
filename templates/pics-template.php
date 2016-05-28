@@ -97,7 +97,10 @@ if( $images ): ?>
                     <div class="title-cover">
                       <h2><?php echo $image['caption']; ?></h2>
                     </div>
-                      <div class="img-pic" style="background-size: cover; background-image: url(<?php echo $image['url']; ?>);"></div>
+										<div class="img-pic">
+											<img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+										</div>
+                      <!-- <div class="img-pic" style="background-size: cover; background-image: url(<?php echo $image['url']; ?>);"></div> -->
                     </a>
                 </section>
             <?php endforeach; ?>
