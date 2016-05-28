@@ -38,6 +38,18 @@ section.home-container {
       .slideBtn {
         margin: 0 5px;
       }
+      .enroute-logo {
+        z-index: 200;
+        position: absolute;
+        right: 80px;
+        bottom: 40px;
+        // background: #000;
+        background-image: url('../images/enroute_nav.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 200px;
+        height: 115px;
+      }
     }
   }
 }

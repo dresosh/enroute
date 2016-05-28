@@ -11,6 +11,7 @@
       <?php endif; ?>
     </div>
     <div class="slideshow col-md-12">
+      <div class="enroute-logo"></div>
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -37,6 +38,7 @@
           <?php endif; ?>
 
         </div>
+        <!-- Enroute Logo -->
 
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">

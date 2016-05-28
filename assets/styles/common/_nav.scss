@@ -1,31 +1,77 @@
 nav.navbar.navbar-inverse {
+  background: $nav-bg;
   border-radius: 0;
   border: none;
   text-transform: uppercase;
   position: fixed;
-  z-index: 200;
+  z-index: 500;
+  height: $nav-height;
+  .navbar-header {
+    .navbar-toggle {
+      margin-top: 14px;
+      border: none;
+      position: absolute;
+      right: 10px;
+    }
+  }
   .a2a_kit {
+    a:first-child {
+      top: -10px !important;
+    }
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 0;
     width: 200px;
     @include iphone {
       display: none;
     };
   }
-  li {
-    a {
-      @include font2;
-      transition: color .5s;
-      text-align: center;
-       &:hover, &:focus, &:active {
-         color: green;
-       }
+  .navbar-brand {
+    img {
+      position: relative;
+      top: -10px;
+      height: 50px;
+      width: 98px;
+      // @include iphone {
+      //   position: absolute;
+      //   top: 5px;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      // };
+    }
+  }
+  .navbar-collapse {
+    border-top: none;
+    box-shadow: none;
+    height: 100%;
+    ul {
+      background: $nav-ul;
+      @include iphone {
+        height: calc(100vh - #{$nav-height}) !important;
+
+      };
+      li {
+        a {
+          @include font2;
+          padding-top: 22px;
+          transition: color .5s;
+          text-align: center;
+          @include iphone {
+            padding: 30px 0;
+          };
+          &:hover, &:focus, &:active {
+            color: green;
+          }
+        }
+      }
     }
   }
 
 }
 
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+    max-height: 100%;
+}
 
 // Active State
 .navbar-inverse .navbar-nav>.active>a,

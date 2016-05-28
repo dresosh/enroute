@@ -4,7 +4,7 @@
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-nav" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#enroute-nav" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -17,11 +17,11 @@
             <a class="a2a_button_sms"></a>
             <a class="a2a_button_whatsapp"></a>
           </div>
-          <a class="navbar-brand" href="/enroute">Enroute</a>
+          <a class="navbar-brand" href="/enroute"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/enroute_nav.png" alt="" /></a>
         </div>
       <?php
       if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'container_id' => 'example-nav', 'container_class' => 'collapse navbar-collapse' ]);
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'container_id' => 'enroute-nav', 'container_class' => 'collapse navbar-collapse' ]);
       endif;
       ?>
     </nav>
