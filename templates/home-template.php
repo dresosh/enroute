@@ -5,7 +5,7 @@
 ?>
 <section class="home-container container animated fadeInUp">
   <div class="row">
-    <div class="heading col-md-12 animated fadeInRight">
+    <div class="heading col-md-12 animated bounceInRight">
       <?php if( get_field('heading') ): ?>
         <h1><?php echo get_field( 'heading' ); ?></h1>
       <?php endif; ?>

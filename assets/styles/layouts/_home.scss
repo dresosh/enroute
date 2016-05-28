@@ -1,4 +1,5 @@
 section.home-container {
+  overflow: hidden;
   .row {
     margin: 0 -30px;
     @include iphone {

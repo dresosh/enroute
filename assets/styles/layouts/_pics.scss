@@ -22,6 +22,7 @@ $pic-h: calc(#{$img-height} / 3 );
 
 
 section.pics-container {
+  overflow: hidden;
   .main-pics {
     height: $main-pic-h;
     background-size: cover;
